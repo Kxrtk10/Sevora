@@ -1,17 +1,18 @@
 # Healthcare
 
-## Industry
+Sevora helps healthcare operators reduce administrative drag, improve patient communication, and create clearer operational visibility.
 
-Healthcare organizations operate in environments where service quality, speed, cost control, and trust matter.
+## Reference Product
 
-## Common Problems
+- [ClinicFlow](../../products/reference/ClinicFlow/) is the primary healthcare reference solution.
 
-Common problems include administrative overload, patient follow-up gaps, fragmented records, staff scheduling pressure.
+## Problem Areas
 
-## Potential AI Solutions
+- Appointment scheduling and rescheduling friction.
+- Manual patient intake and follow-up.
+- Staff coordination across front desk, providers, and administrators.
+- Limited visibility into clinic capacity, bottlenecks, and missed opportunities.
 
-Potential Sevora solutions include intake assistants, care-plan copilots, triage workflows, document automation.
+## Solution Direction
 
-## Future Demo Product
-
-Create a focused demo that solves one visible workflow for one specific user. The demo should show business value in minutes and be easy to explain to an operator in the industry.
+Healthcare solution work should use ClinicFlow as the product proof point. Industry documentation should explain problems, buyers, workflows, and outcomes; product behavior belongs in the ClinicFlow docs.

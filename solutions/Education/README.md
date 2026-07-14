@@ -1,17 +1,18 @@
 # Education
 
-## Industry
+Sevora helps education organizations improve administrative workflows, learning support, and operational clarity.
 
-Education organizations operate in environments where service quality, speed, cost control, and trust matter.
+## Reference Product
 
-## Common Problems
+No dedicated education reference product has been selected yet.
 
-Common problems include teacher workload, uneven student support, curriculum planning, parent communication.
+## Problem Areas
 
-## Potential AI Solutions
+- Manual admissions, scheduling, and student support workflows.
+- Fragmented communication between students, educators, and administrators.
+- Limited operational visibility across programs and cohorts.
+- Repetitive reporting and compliance preparation.
 
-Potential Sevora solutions include lesson copilots, adaptive tutoring, progress dashboards, administrative automation.
+## Solution Direction
 
-## Future Demo Product
-
-Create a focused demo that solves one visible workflow for one specific user. The demo should show business value in minutes and be easy to explain to an operator in the industry.
+Education remains a future solution lane. Promote a reference product only after healthcare, restaurant, and enterprise proof points are stronger.

@@ -1,0 +1,50 @@
+services:
+  database:
+    image: postgres:16-alpine
+    container_name: clinicflow-database
+    environment:
+      POSTGRES_DB: clinicflow
+      POSTGRES_USER: clinicflow
+      POSTGRES_PASSWORD: clinicflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - clinicflow_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U clinicflow -d clinicflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    container_name: clinicflow-backend
+    env_file:
+      - ./backend/.env.development
+    environment:
+      DATABASE_URL: postgresql+asyncpg://clinicflow:clinicflow@database:5432/clinicflow
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      database:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: clinicflow-frontend
+    environment:
+      VITE_API_BASE_URL: http://localhost:8000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+volumes:
+  clinicflow_postgres_data:

@@ -9,11 +9,14 @@ node_modules/
 dist/
 build/
 .next/
+.npm-cache/
 
 # Environment and local secrets
 .env
 .env.*
 !.env.example
+!backend/.env.development
+!backend/.env.production
 
 # OS and editor files
 .DS_Store
@@ -24,3 +27,8 @@ Thumbs.db
 # Generated exports
 exports/
 tmp/
+
+# Python tooling
+.pip-cache/
+.ruff_cache/
+*.egg-info/

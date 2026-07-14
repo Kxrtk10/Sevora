@@ -1,17 +1,18 @@
 # Enterprise
 
-## Industry
+Sevora helps teams turn scattered knowledge, repetitive workflows, and unclear decisions into usable operating systems.
 
-Enterprise organizations operate in environments where service quality, speed, cost control, and trust matter.
+## Reference Product
 
-## Common Problems
+- [TeamMind](../../products/reference/TeamMind/) is the primary enterprise reference solution.
 
-Common problems include knowledge silos, slow internal processes, disconnected tools, unclear operating metrics.
+## Problem Areas
 
-## Potential AI Solutions
+- Knowledge trapped across documents, chats, and individuals.
+- Repetitive internal processes that drain team capacity.
+- Poor visibility into decisions, ownership, and operational history.
+- AI adoption without clear workflow integration.
 
-Potential Sevora solutions include internal copilots, workflow automation, executive dashboards, knowledge retrieval.
+## Solution Direction
 
-## Future Demo Product
-
-Create a focused demo that solves one visible workflow for one specific user. The demo should show business value in minutes and be easy to explain to an operator in the industry.
+Enterprise solution work should use TeamMind as the product proof point. Industry documentation should describe organizational problems and implementation patterns; product behavior belongs in TeamMind docs.

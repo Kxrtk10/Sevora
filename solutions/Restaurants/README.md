@@ -1,17 +1,18 @@
 # Restaurants
 
-## Industry
+Sevora helps restaurants improve operational coordination, reduce manual work, and make daily performance easier to understand.
 
-Restaurants organizations operate in environments where service quality, speed, cost control, and trust matter.
+## Reference Product
 
-## Common Problems
+- [RestaurantOS](../../products/reference/RestaurantOS/) is the primary restaurant reference solution.
 
-Common problems include thin margins, inconsistent demand, manual inventory, slow customer feedback loops.
+## Problem Areas
 
-## Potential AI Solutions
+- Fragmented ordering, inventory, and staff workflows.
+- Manual reporting and limited shift-level visibility.
+- Guest communication gaps.
+- Owner dependence on scattered tools and informal processes.
 
-Potential Sevora solutions include demand forecasting, menu analytics, reservation copilots, review intelligence.
+## Solution Direction
 
-## Future Demo Product
-
-Create a focused demo that solves one visible workflow for one specific user. The demo should show business value in minutes and be easy to explain to an operator in the industry.
+Restaurant solution work should use RestaurantOS as the product proof point. Industry documentation should describe restaurant problems and buying context; product behavior belongs in RestaurantOS docs.

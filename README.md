@@ -1,67 +1,90 @@
-# SevoraOS v1
+# SevoraOS
 
-SevoraOS is the operating system for Sevora: the place where the company records its strategy, products, brand, sales motion, research, and operating principles.
+SevoraOS is the internal operating system for Sevora. It holds the company foundation, product portfolio, industry solution strategy, website plan, operating playbooks, reusable templates, and execution roadmap.
 
-This repository is not a client project and it is not one of Sevora's products. It is the brain of the company: a durable internal system designed to help Sevora make better decisions, build better software, and compound knowledge over the next decade.
+This repository is not a client project. It is the durable source of truth for how Sevora thinks, builds, sells, and scales.
 
-## What Sevora Is
+## Structure
 
-Sevora is an AI Product Studio. We build intelligent software, develop our own products, and solve real business problems for companies through practical AI systems.
+- [company](company/) - constitution, business blueprint, decision history, and operating playbook.
+- [knowledge](knowledge/) - AI research, industry intelligence, opportunities, and research notes.
+- [products](products/) - owned products, reference solutions, and engineering standards.
+- [solutions](solutions/) - industry solution narratives that reference products instead of duplicating product docs.
+- [website](website/) - site architecture, content strategy, page map, and animation direction.
+- [branding](branding/) - brand voice, visual identity, design principles, and assets.
+- [operations](operations/) - business development, finance, hiring, legal, and operating records.
+- [templates](templates/) - reusable document templates for delivery and internal work.
+- [scripts](scripts/) - utility scripts for maintaining SevoraOS.
 
-Sevora is not an agency. We do not exist to sell hours. We exist to create useful technology, own durable product IP, and help serious businesses adopt AI with clarity.
+## Sources of Truth
 
-## Mission
+- [MASTER_ROADMAP.md](MASTER_ROADMAP.md) is the company execution roadmap.
+- [NEXT_ACTIONS.md](NEXT_ACTIONS.md) is the next ten engineering tasks, ordered for immediate execution.
+- [company/constitution](company/constitution/) defines Sevora's durable principles.
+- [products/engineering](products/engineering/) defines the build standard.
 
-To build intelligent products and systems that help companies operate with more speed, insight, and leverage.
+## Contribution Standard
 
-## Vision
+Keep documents specific, useful, and current. Link to related material instead of duplicating it. Move outdated strategy into the right archive or index only when it remains useful.
 
-Sevora will become a global technology company known for building thoughtful AI products, trusted business systems, and category-defining software.
+## ClinicFlow Development
 
-## Philosophy
+ClinicFlow implementation starts from two top-level application folders:
 
-We believe AI should make work clearer, not noisier. Great software should feel calm, capable, and deeply useful. Sevora will prioritize durable products, sharp execution, honest research, and long-term trust over short-term hype.
+- [frontend](frontend/) - React, TypeScript, Vite, TailwindCSS, React Router, TanStack Query, and React Hook Form.
+- [backend](backend/) - FastAPI, SQLAlchemy 2, Alembic, PostgreSQL, and Pydantic Settings.
 
-## What We Build
+### Prerequisites
 
-Sevora builds across three connected tracks:
+- Node.js 22 or newer.
+- Python 3.12 or newer.
+- Docker and Docker Compose for containerized development.
 
-- Owned products that can scale into independent businesses.
-- Industry solutions that solve repeated, high-value problems for companies.
-- Internal systems that make Sevora more focused, organized, and operationally excellent.
+### Frontend
 
-## Repository Structure
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-- [docs](docs/) contains the company's foundations, strategy, and operating records.
-- [website](website/) defines Sevora's public web presence and content roadmap.
-- [products](products/) tracks product ideas, status, and long-term direction.
-- [solutions](solutions/) organizes industry problem spaces and AI solution opportunities.
-- [branding](branding/) captures identity, voice, design principles, and visual systems.
-- [sales](sales/) defines the commercial motion, discovery process, and proposal approach.
-- [operations](operations/) documents how the company runs.
-- [research](research/) collects AI, industry, competitor, and future product research.
-- [assets](assets/) stores brand and product media.
-- [scripts](scripts/) contains maintenance utilities for SevoraOS.
+Useful commands:
 
-## Long-Term Roadmap
+```bash
+npm run build
+npm run lint
+npm run typecheck
+npm run format
+```
 
-1. Establish the foundation: mission, principles, product map, brand, and operating rhythm.
-2. Build the first credible public website and product narrative.
-3. Validate initial solution categories through focused discovery and prototypes.
-4. Convert repeated service patterns into reusable products and platforms.
-5. Create a portfolio of owned products supported by strong research and distribution.
-6. Evolve SevoraOS into a living company intelligence layer with dashboards, decision history, and AI-assisted planning.
+### Backend
 
-## Contribution Guidelines
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e ".[dev]"
+uvicorn app.main:app --reload
+```
 
-- Keep documentation concise, specific, and useful.
-- Prefer clear decisions over vague brainstorming.
-- Link related documents instead of duplicating information.
-- Update decision logs when strategy changes.
-- Treat this repository as a long-term company asset.
+The API is versioned under `/api/v1`. The health endpoint is:
 
-## Future SevoraOS Vision
+```bash
+GET http://localhost:8000/api/v1/health
+```
 
-SevoraOS should eventually become more than documentation. It should become an internal intelligence system that connects goals, research, products, customer insights, financial models, delivery workflows, and company memory.
+### Docker
 
-The goal is simple: as Sevora grows, the company should become more coherent, not more chaotic.
+```bash
+docker compose up --build
+```
+
+Services:
+
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:8000`
+- PostgreSQL: `localhost:5432`
+
+### Foundation Boundaries
+
+This codebase is intentionally limited to the engineering foundation. It includes layouts, routing, configuration, database model shells, API versioning, health checks, Docker, linting, formatting, and authentication boundaries. ClinicFlow business logic, AI, and appointment workflows are intentionally not implemented yet.
