@@ -9,6 +9,12 @@ import { AppointmentsPage } from "./pages/Appointments";
 import { DoctorDashboardPage } from "./pages/DoctorDashboard";
 import { LandingPage } from "./pages/Landing";
 import { LoginPage } from "./pages/Login";
+import {
+  AboutPage,
+  ContactPage,
+  FeaturesPage,
+  ProductPage,
+} from "./pages/MarketingPages";
 import { PatientDashboardPage } from "./pages/PatientDashboard";
 import { ReceptionDashboardPage } from "./pages/ReceptionDashboard";
 import { RegisterPage } from "./pages/Register";
@@ -30,6 +36,26 @@ export const router = createBrowserRouter([
       {
         path: "register",
         element: <RegisterPage />,
+      },
+      {
+        path: "product",
+        element: <ProductPage />,
+      },
+      {
+        path: "features",
+        element: <FeaturesPage />,
+      },
+      {
+        path: "ai-concierge",
+        element: <AIConciergePage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
       {
         element: <AppLayout />,
