@@ -21,6 +21,9 @@ class Settings(BaseSettings):
     )
     database_url: str = "postgresql+asyncpg://clinicflow:clinicflow@localhost:5432/clinicflow"
     log_level: str = "INFO"
+    jwt_secret: str = "development-only-change-before-production"
+    jwt_expiry_minutes: int = 15
+    refresh_token_expiry_days: int = 30
 
     @cached_property
     def backend_cors_origins(self) -> list[str]:

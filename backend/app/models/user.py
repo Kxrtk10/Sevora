@@ -15,7 +15,7 @@ if TYPE_CHECKING:
 
 class UserRole(StrEnum):
     ADMIN = "admin"
-    RECEPTION = "reception"
+    RECEPTIONIST = "receptionist"
     DOCTOR = "doctor"
     PATIENT = "patient"
 
@@ -24,6 +24,7 @@ class User(IdMixin, TimestampMixin, Base):
     __tablename__ = "users"
 
     email: Mapped[str] = mapped_column(String(320), unique=True, index=True, nullable=False)
+    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
     full_name: Mapped[str] = mapped_column(String(200), nullable=False)
     role: Mapped[UserRole] = mapped_column(String(50), nullable=False)
     status: Mapped[str] = mapped_column(String(50), default="invited", nullable=False)

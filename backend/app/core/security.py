@@ -5,7 +5,7 @@ from enum import StrEnum
 class Role(StrEnum):
     ADMIN = "admin"
     MANAGER = "manager"
-    RECEPTION = "reception"
+    RECEPTIONIST = "receptionist"
     DOCTOR = "doctor"
     PATIENT = "patient"
 
